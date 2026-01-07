@@ -1,6 +1,6 @@
-import { useState, Suspense } from 'react';import Navigation from './components/Navigation';
+import { useState, Suspense } from 'react';
+import Navigation from './components/Navigation';
 import Loading from './Loading';
-
 import Hero from './components/Hero';
 import About from './components/About';
 import Statistics from './components/Statistics';

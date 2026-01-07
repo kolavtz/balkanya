@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import Navigation from './components/Navigation';
+import { useState, Suspense } from 'react';import Navigation from './components/Navigation';
+import Loading from './Loading';
+
 import Hero from './components/Hero';
 import About from './components/About';
 import Statistics from './components/Statistics';
@@ -13,6 +14,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
+        <Suspense fallback={<Loading />}>
     <div className="min-h-screen bg-white">
       <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Hero />
@@ -24,6 +26,7 @@ function App() {
       <Contact />
       <Footer />
     </div>
+              </Suspense>
   );
 }
 

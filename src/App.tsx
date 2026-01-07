@@ -14,7 +14,6 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-        <Suspense fallback={<Loading />}>
     <div className="min-h-screen bg-white">
       <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Hero />
@@ -26,7 +25,6 @@ function App() {
       <Contact />
       <Footer />
     </div>
-              </Suspense>
   );
 }
 
